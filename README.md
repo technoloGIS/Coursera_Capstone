@@ -1,4 +1,4 @@
-Applied Data Science Capstone
+##Applied Data Science Capstone
 Peer-graded Assignment: Capstone Project - The Battle of Neighborhoods
 Stella Metran
 IBM Data Science Professional
