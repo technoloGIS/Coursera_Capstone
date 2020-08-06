@@ -65,12 +65,15 @@ Discussion section where you discuss any observations you noted and any recommen
 
 **_When I first decided to create this study I was expecting to find clusters of restaurants in certain regions and the final result 
 didn't meet that expectation._**
+Problem Which Tried to Solve:
+The major purpose of this project, is to suggest a better neighborhood in a new city for the person who are shiffting there. Social presence in society in terms of like minded people. Connectivity to the airport, bus stand, city center, markets and other daily needs things nearby.
 
+Sorted list of house in terms of housing prices in a ascending or descending order
+Sorted list of schools in terms of location, fees, rating and reviews
 
 ## 6) Conclusion
+In this Capstone project, using k-means cluster algorithm I separated the neighborhood into 10(Ten) different clusters and for 103 different lattitude and logitude from dataset, which have very-similar neighborhoods around them. Using the charts above results presented to a particular neighborhood based on average house prices and school rating have been made.
 
-Conclusion section where you conclude the report.
-
-**_This report may be helpful for someone planning on opening a restaurant in Toronto, by comparing the current offers and 
-neighborhoods profiles, however it may not cover all variables such as access to public transportation or even the restaurants 
-profiles, so it shall not be used as a single decidion making tool._**
+I feel rewarded with the efforts and believe this course with all the topics covered is well worthy of appreciation.
+This project has shown me a practical application to resolve a real situation that has impacting personal and financial impact using Data Science tools.
+The mapping with Folium is a very powerful technique to consolidate information and make the analysis and decision better with confidence.
