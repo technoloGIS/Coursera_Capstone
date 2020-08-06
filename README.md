@@ -1,77 +1,40 @@
-. Introduction:
-The purpose of this Capstone Project is to help people in exploring better facilities around their neighborhood. It will help people making smart and efficient decision on selecting great neighborhood out of numbers of other neighborhoods in Scarborough, Toranto.
+Applied Data Science Capstone
+Peer-graded Assignment: Capstone Project - The Battle of Neighborhoods
+Stella Metran
+IBM Data Science Professional
 
-Lots of people are migrating to various states of Canada and needed lots of research for good housing prices and reputated schools for their children. This project is for those people who are looking for better neighborhoods. For ease of accessing to Cafe, School, Super market, medical shops, grocery shops, mall, theatre, hospital, like minded people, etc.
+Now that you have been equipped with the skills and the tools to use location data to explore a geographical location, over the course of two weeks, you will have the opportunity to be as creative as you want and come up with an idea to leverage the Foursquare location data to explore or compare neighborhoods or cities of your choice or to come up with a problem that you can use the Foursquare location data to solve.
 
-This Capstone Project aim to create an analysis of features for a people migrating to Scarborough to search a best neighborhood as a comparative analysis between neighborhoods. The features include median housing price and better school according to ratings, crime rates of that particular area, road connectivity, weather conditions, good management for emergency, water resources both freash and waste water and excrement conveyed in sewers and recreational facilities.
+1) Introduction/Business Problem
+Clearly define a problem or an idea of your choice, where you would need to leverage the Foursquare location data to solve or execute. Remember that data science problems always target an audience and are meant to help a group of stakeholders solve a problem, so make sure that you explicitly describe your audience and why they would care about your problem.
 
-It will help people to get awareness of the area and neighborhood before moving to a new city, state, country or place for their work or to start a new fresh life.
+The idea of this study is to help people planning to open a new restaurant in Toronto to chose the right location by providing data about the income and population of each neighborhood as well as the competitors already present on the same regions.
 
-2. Data Section
-Data Link: https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M
+2) Downloading and Prepping Data
+Describe the data that you will be using to solve the problem or execute your idea. Remember that you will need to use the Foursquare location data to solve the problem or execute your idea. You can absolutely use other datasets in combination with the Foursquare location data. So make sure that you provide adequate explanation and discussion, with examples, of the data that you will be using, even if it is only Foursquare location data.
 
-Will use Scarborough dataset which we scrapped from wikipedia on Week 3. Dataset consisting of latitude and longitude, zip codes.
+To provide the stakeholders the necessary information I'll be combining Toronto's 2016 Census that contains Population, Average income per Neighborhood with Toronot's Neighborhoods shapefile and Foursquare API to collect competitors on the same neighborhoods.
 
-Foursquare API Data:
-We will need data about different venues in different neighborhoods of that specific borough.
-In order to gain that information we will use “Foursquare” locational information. Foursquare is a location data provider with information about all manner of venues and events within an area of interest. Such information includes venue names, locations, menus and even photos. As such, the foursquare location platform will be used as the sole data source since all the stated required information can be obtained through the API.
+Toronto's Census data is publicly available at this website: https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#8c732154-5012-9afe-d0cd-ba3ffc813d5a
 
-After finding the list of neighborhoods, we then connect to the Foursquare API to gather information about venues inside each and every neighborhood. For each neighborhood, we have chosen the radius to be 100 meter.
+Toronto Neighborhoods' shapefile is publicly available at this website: https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#a45bd45a-ede8-730e-1abc-93105b2c439f
 
-The data retrieved from Foursquare contained information of venues within a specified distance of the longitude and latitude of the postcodes. The information obtained per venue as follows:
+3) Methodology
+Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, and what machine learnings were used and why.
 
-1. Neighborhood
-2. Neighborhood Latitude
-3. Neighborhood Longitude
-4. Venue
-5. Name of the venue e.g. the name of a store or restaurant
-6. Venue Latitude
-7. Venue Longitude
-8. Venue Category
-Map of Scarborough
+For this report I used a few different maps that could help a new investor to decide the best neighborhood to open a restaurant in Toronto based on it's income, population and available competitors. In order to do that I've used the 2016 Census information combined with choropleth maps to visually display the wealthier and more populational neighborhoods and Foursquare data to display the current restaurants in each region.
 
+4) Results
+Results section where you discuss the results.
 
-3. Methodology Section
-Clustering Approach:
-To compare the similarities of two cities, we decided to explore neighborhoods, segment them, and group them into clusters to find similar neighborhoods in a big city like New York and Toronto. To be able to do that, we need to cluster data which is a form of unsupervised machine learning: k-means clustering algorithm.
+Comparing the maps we can notice the majority of the restaurants grouped on main streets and on the south of the city, although some of the welthiest neighborhoods are up to the north. Also, the areas with a dense population don't reflect on the number of restaurants.
 
-Using K-Means Clustering Approach | Most Common Venue
+5) Discussion
+Discussion section where you discuss any observations you noted and any recommendations you can make based on the results.
 
+When I first decided to create this study I was expecting to find clusters of restaurants in certain regions and the final result didn't meet that expectation.
 
-Most Common Venues near Neighborhood | Using Clustering
+6) Conclusion
+Conclusion section where you conclude the report.
 
-
-Work Flow:
-Using credentials of Foursquare API features of near-by places of the neighborhoods would be mined. Due to http request limitations the number of places per neighborhood parameter would reasonably be set to 100 and the radius parameter would be set to 500.
-
-would be set to 500.
-
-4. Results Section
-Map of Clusters in Scarborough
-
-
-Average Housing Price by Clusters in Scarborough
-
-
-School Ratings by Clusters in Scarborough
-
-
-The Location:
-Scarborough is a popular destination for new immigrants in Canada to reside. As a result, it is one of the most diverse and multicultural areas in the Greater Toronto Area, being home to various religious groups and places of worship. Although immigration has become a hot topic over the past few years with more governments seeking more restrictions on immigrants and refugees, the general trend of immigration into Canada has been one of on the rise.
-
-Foursquare API:
-This Capstone project have used Four-square API as its prime data gathering source as it has a database of millions of places, especially their places API which provides the ability to perform location search, location sharing and details about a business.
-
-5. Discussion Section
-Problem Which Tried to Solve:
-The major purpose of this project, is to suggest a better neighborhood in a new city for the person who are shiffting there. Social presence in society in terms of like minded people. Connectivity to the airport, bus stand, city center, markets and other daily needs things nearby.
-
-Sorted list of house in terms of housing prices in a ascending or descending order
-Sorted list of schools in terms of location, fees, rating and reviews
-6. Conclusion Section
-In this Capstone project, using k-means cluster algorithm I separated the neighborhood into 10(Ten) different clusters and for 103 different lattitude and logitude from dataset, which have very-similar neighborhoods around them. Using the charts above results presented to a particular neighborhood based on average house prices and school rating have been made.
-
-I feel rewarded with the efforts and believe this course with all the topics covered is well worthy of appreciation.
-This project has shown me a practical application to resolve a real situation that has impacting personal and financial impact using Data Science tools.
-The mapping with Folium is a very powerful technique to consolidate information and make the analysis and decision better with confidence.
-             
+This report may be helpful for someone planning on opening a restaurant in Toronto, by comparing the current offers and neighborhoods profiles, however it may not cover all variables such as access to public transportation or even the restaurants profiles, so it shall not be used as a single decidion making tool.
